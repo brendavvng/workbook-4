@@ -11,7 +11,7 @@ public class Room {
     private boolean dirty;
 
     // creating constructor
-    public Reservation(int numberOfBeds, double price, boolean occupied, boolean dirty) {
+    public Room(int numberOfBeds, double price, boolean occupied, boolean dirty) {
         this.numberOfBeds = numberOfBeds;
         this.price = price;
         this.occupied = occupied;
