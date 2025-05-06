@@ -36,8 +36,8 @@ public class Room {
     }
 
     // creating derived getter
-    // room is only available if it is clean and vacant
     public boolean isAvailable() {
+        // the room is only avail if the room is not occupied and if it is not dirty
         return !isOccupied() && !isDirty();
     }
 }
