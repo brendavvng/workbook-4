@@ -37,6 +37,6 @@ public class HotelApp {
         employee2.punchIn(9.0); // 9:00am
         employee2.punchOut(13.5); // 1:30pm
 
-        System.out.println("Employee 2 - Hours Worked : " + employee2.getHoursWorked());
+        System.out.println(employee2.getName() + "'s - Hours Worked : " + employee2.getHoursWorked());
     }
 }
