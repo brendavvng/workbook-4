@@ -10,7 +10,8 @@ public class Employee {
     private String department;
     private double payRate;
     private double hoursWorked;
-
+    // creating start time for employee
+    private double empPunchIn;
 
     // generating constructor
     public Employee(String employeeId, String name, String department, double payRate, double hoursWorked) {
@@ -57,10 +58,29 @@ public class Employee {
 
     // derived getter for getting total pay rate
     public double getTotalPayRate() {
-        double regularPayRate = getRegularHours() * payRate; // regular hours is 40 hours for full time
-        double overtimePayRate = getOvertimeHours() * payRate * 1.5; // overtime is 1.5 x regular pay rate
-        return regularPayRate + overtimePayRate; // adding regularPayRate and overtimePayRate to getTotalPayRate
+        // regular hours is 40 hours for full time
+        double regularPayRate = getRegularHours() * payRate;
+        // overtime is 1.5 x regular pay rate
+        double overtimePayRate = getOvertimeHours() * payRate * 1.5;
+        // adding regularPayRate and overtimePayRate to getTotalPayRate
+        return regularPayRate + overtimePayRate;
+    }
+
+    // creating punchIn method from exercise 2
+    public void punchIn (double time) {
+        // takes in punch in time
+        this.empPunchIn = time;
     }
 
 
+    // creating punchOut method
+    public void punchOut (double time) {
+        // calculating how many hours worked once emp punches out
+        // input variables will be: 10:00am -> 10.0, 12:30pm -> 12.5, 2:45pm -> 14.75
+        double empPunchOut = time - empPunchIn;
+        this.hoursWorked += empPunchOut;
+
+       // hoursWorked = emp punch out - start time
+       // emp = 0 hours;
+    }
 }

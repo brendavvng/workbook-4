@@ -29,6 +29,14 @@ public class HotelApp {
         System.out.printf("%s has worked %.2f hours this week.\n", emp.getName(), emp.getHoursWorked());
         System.out.printf(emp.getName() + ("'s Total Pay for one week: $%.2f"), emp.getTotalPayRate());
 
+        System.out.println("\n~---------------------------------------~");
 
+        // testing punch in and punch out method
+        Employee employee2 = new Employee("102", "Choco Cat", "HR", 20.0, 0);
+
+        employee2.punchIn(9.0); // 9:00am
+        employee2.punchOut(13.5); // 1:30pm
+
+        System.out.println("Employee 2 - Hours Worked : " + employee2.getHoursWorked());
     }
 }
