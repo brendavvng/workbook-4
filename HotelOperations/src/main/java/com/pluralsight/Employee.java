@@ -1,5 +1,9 @@
 package com.pluralsight;
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
+
 public class Employee {
 
     // private variables:
@@ -79,8 +83,28 @@ public class Employee {
         // input variables will be: 10:00am -> 10.0, 12:30pm -> 12.5, 2:45pm -> 14.75
         double empPunchOut = time - empPunchIn;
         this.hoursWorked += empPunchOut;
-
        // hoursWorked = emp punch out - start time
        // emp = 0 hours;
+    }
+
+    // going to  use local date . now and HH and MM  (getHour) (getMinute) - these will be double
+    // divide minutes by 60, so that 4:30 is 4.5
+
+    // creating new punchIn method from exercise 3
+    public void punchIn() {
+        // importing Local Date Time for new punchIn method to get the current date
+        LocalDateTime now = LocalDateTime.now();
+        double time = now.getHour() + (now.getMinute() / 60.0);
+        // re-using the double time punch in method
+        punchIn(time);
+    }
+
+    // creating new punchOut  method from exercise 3
+    public void punchOut() {
+        LocalTime now = LocalTime.now();
+        double time = now.getHour() + (now.getMinute() / 60.0);
+        // re-using the double time punch out time method
+        punchOut(time);
+
     }
 }
