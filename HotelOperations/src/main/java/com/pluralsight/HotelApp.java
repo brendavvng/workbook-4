@@ -37,6 +37,43 @@ public class HotelApp {
         employee2.punchIn(9.0); // 9:00am
         employee2.punchOut(13.5); // 1:30pm
 
-        System.out.println(employee2.getName() + "'s - Hours Worked : " + employee2.getHoursWorked());
+        System.out.println(employee2.getName() + "'s - Hours Worked: " + employee2.getHoursWorked());
+
+
+        System.out.println("~---------------------------------------~");
+
+        Hotel hotel = new Hotel("Four Seasons Hotel", 15, 100);
+
+        // printing the availability
+        System.out.println("Available suites: " + hotel.getAvailableSuites());
+        System.out.println("Available rooms: " + hotel.getAvailableRooms());
+
+        // try to book 2 suites
+        boolean suitesBooked = hotel.bookRoom(2, true);
+        System.out.println("Booking 2 suites: " + (suitesBooked ? "Success" : "Failed"));
+
+        // Try to book 5 basic rooms
+        boolean roomsBooked = hotel.bookRoom(5, false);
+        System.out.println("Booking 5 basic rooms: " + (roomsBooked ? "Success" : "Failed"));
+
+
+        // Print availability after booking
+        System.out.println("Available suites after booking: " + hotel.getAvailableSuites());
+        System.out.println("Available rooms after booking: " + hotel.getAvailableRooms());
+
+        // booking 5 more suites
+        boolean overbookSuites = hotel.bookRoom(5, true);
+        System.out.println("Booking 5 more suites: " + (overbookSuites ? "Success" : "Failed"));
+
+        // booking 20 more basic rooms
+        boolean overbookRooms = hotel.bookRoom(20, false);
+        System.out.println("Booking 20 more basic rooms: " + (overbookRooms ? "Success" : "Failed"));
+
+        // Final availability check
+        System.out.println("Final available suites: " + hotel.getAvailableSuites());
+        System.out.println("Final available rooms: " + hotel.getAvailableRooms());
+
+
     }
+
 }

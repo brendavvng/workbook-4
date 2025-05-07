@@ -96,7 +96,7 @@ public class Employee {
         LocalDateTime now = LocalDateTime.now();
         double time = now.getHour() + (now.getMinute() / 60.0);
         // re-using the double time punch in method
-        punchIn(time);
+        this.punchIn(time);
     }
 
     // creating new punchOut  method from exercise 3
@@ -104,7 +104,7 @@ public class Employee {
         LocalTime now = LocalTime.now();
         double time = now.getHour() + (now.getMinute() / 60.0);
         // re-using the double time punch out time method
-        punchOut(time);
+        this.punchOut(time);
 
     }
 }
