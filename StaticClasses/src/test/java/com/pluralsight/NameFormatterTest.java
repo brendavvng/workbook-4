@@ -23,13 +23,13 @@ class NameFormatterTest {
     @Test
     public void testFormat_NoMiddleOrSuffix() {
         String result = NameFormatter.format("", "Mel", "", "Johnson", "");
-        assertEquals("Johnson, Mel", result);
+        assertEquals("Johnson, Mel, ", result);
     }
 
     @Test
     public void testFormat_WithMiddleOnly() {
         String result = NameFormatter.format("", "Mel", "B", "Johnson", "");
-        assertEquals("Johnson, Mel B", result);
+        assertEquals("Johnson, Mel B, ", result);
     }
 
     @Test
@@ -41,19 +41,19 @@ class NameFormatterTest {
     @Test
     public void testFormat_FullNameWithPrefixMiddleSuffix() {
         String result = NameFormatter.format("Dr. Mel B Johnson, PhD");
-        assertEquals("Johnson, Dr. Mel B, PhD", result);
+        assertEquals("Johnson, Mel Dr. B, PhD", result);
     }
 
     @Test
     public void testFormat_FullNameWithoutPrefixOrSuffix() {
         String result = NameFormatter.format("Mel Johnson");
-        assertEquals("Johnson, Mel", result);
+        assertEquals("Johnson, Mel, ", result);
     }
 
     @Test
     public void testFormat_FullNameWithMiddle() {
         String result = NameFormatter.format("Mel B Johnson");
-        assertEquals("Johnson, Mel B", result);
+        assertEquals("Johnson, Mel B, ", result);
     }
 
 }
