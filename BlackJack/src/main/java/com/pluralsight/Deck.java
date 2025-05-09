@@ -17,6 +17,7 @@ public class Deck {
         for (String suit : suits) {
             for (String value : values) {
                 Card card = new Card(suit, value);
+                // adding the new card to the deck of cards
                 cards.add(card);
             }
         }
@@ -36,6 +37,7 @@ public class Deck {
         }
     }
 
+    // how many cards are in the deck
     public int getSize() {
         return cards.size();
     }

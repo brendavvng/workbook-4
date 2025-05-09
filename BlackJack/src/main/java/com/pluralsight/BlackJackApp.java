@@ -1,8 +1,18 @@
 package com.pluralsight;
 
-public class CardApp {
+import java.util.Scanner;
+
+public class BlackJackApp {
 
     public static void main(String[] args) {
+
+        // importing scanner to read user input
+        Scanner myScanner = new Scanner(System.in);
+
+
+        // String player1 =
+
+
 
         //create the deck
         Deck deck = new Deck();
