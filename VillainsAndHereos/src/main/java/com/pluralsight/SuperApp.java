@@ -21,6 +21,20 @@ public class SuperApp {
 
         System.out.println(superWinnie.getStatus());
         System.out.println(superChoco.getStatus());
+
+
+        SuperVillain superKai = new SuperVillain("Kai", 100, 30);
+
+        superWinnie.fight(superKai);
+        superKai.fight(superWinnie);
+
+        superWinnie.takeDamage(0);
+        superKai.takeDamage(0);
+
+        System.out.println(superWinnie.getStatus());
+        System.out.println(superKai.getStatus());
+
+
     }
 
 }
