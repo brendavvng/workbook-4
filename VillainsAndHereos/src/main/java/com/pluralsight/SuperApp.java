@@ -1,31 +1,39 @@
 package com.pluralsight;
 
+import java.util.Scanner;
+
 public class SuperApp {
 
     public static void main(String[] args) {
 
+        Scanner myScanner = new Scanner(System.in);
 
-        System.out.println("\n -----Super Hero VS. Super Villain-----\n");
-        System.out.println("     -Introducing SUPERHERO WINNIE-     ");
+        System.out.println("\n.゜｡:+.゜｡Super Hero VS. Super Villain.゜｡:+.゜｡\n");
+        System.out.println("        -Introducing SUPERHERO WINNIE-     ");
+        System.out.println("*・゜゜・*:.。..。.:*・*:゜・*:.。. .。.:*・゜゜・**・゜゜・*:.");
 
+        // creating superhero w/constructor from Super Hero class to print
         SuperHero superWinnie = new SuperHero("Winnie", 100, 30);
 
         // asking super person their health status
         System.out.println(superWinnie.getStatus());
 
-        System.out.println("\n       -Introducing VILLAIN KAI-     ");
-
+        System.out.println("\n          -Introducing VILLAIN KAI-     ");
+        System.out.println("*・゜゜・*:.。..。.:*・*:゜・*:.。. .。.:*・゜゜・**・゜゜・*:.");
         SuperVillain superKai = new SuperVillain("Kai", 100, 30);
 
         // asking super person their health status
         System.out.println(superKai.getStatus());
 
-        System.out.println("\n          - BATTLE BEGINS -         ");
+        System.out.println("\n        Press ENTER to begin battle.");
+        myScanner.nextLine();
 
+        System.out.println("\n             - BATTLE BEGINS -         ");
+        System.out.println("░▒▓█ ░▒▓█▓▒░▒▓█▓▒░▒▓░▒▓█ ░▒▓█▓▒░▒▓█▓▒░▒▓░▒▓█ ░");
 
         // creating while loop for super hero
         while (superWinnie.isAlive() && superKai.isAlive()) {
-            System.out.println("\nWinnie attacks with Paws of Justice!\n");
+            System.out.println("\nWinnie attacks with Paws of Justice! ⍝ ⍝\n");
             superWinnie.fight(superKai);
             System.out.println(superKai.getStatus());
 
@@ -37,7 +45,7 @@ public class SuperApp {
             System.out.println(superWinnie.getStatus());
         }
 
-        System.out.println("\n            - GAME!!! -   ");
+        System.out.println("\n.。..*・゜゜・*:.。..。GAME!!!・**・゜゜・*:.゜・*:.+.゜｡   ");
         if (superWinnie.isAlive()) {
             System.out.println("\nSUPER HERO WINNIE WINS THE BATTLE! \nSUPER VILLAIN KAI LOSES...");
         } else {

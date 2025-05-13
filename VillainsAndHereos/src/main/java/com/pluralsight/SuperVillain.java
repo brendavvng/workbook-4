@@ -16,7 +16,7 @@ public class SuperVillain extends SuperPerson {
 
     @Override
     public void fight(SuperPerson opponent) {
-
+        System.out.println("           --- × Whip Whip! × ---       \n");
         int evilDamage = new Random().nextInt(25);
         // adding experience points to damage
         int evilTotalDamage = evilDamage + this.experiencePoints;
