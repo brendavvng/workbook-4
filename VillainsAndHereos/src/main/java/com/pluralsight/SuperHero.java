@@ -42,6 +42,7 @@ public class SuperHero extends SuperPerson{
             // we were able to attack and damage opponent
             System.out.println(this.name + " is kicking " + opponent.name + "'s butt with " + totalDamage + "% damage!!!");
             opponent.takeDamage(totalDamage);
+            logHit(opponent);
         }
 
     }

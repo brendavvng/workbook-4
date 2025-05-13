@@ -47,10 +47,17 @@ public class SuperApp {
 
         System.out.println("\n.。..*・゜゜・*:.。..。GAME!!!・**・゜゜・*:.゜・*:.+.゜｡   ");
         if (superWinnie.isAlive()) {
-            System.out.println("\nSUPER HERO WINNIE WINS THE BATTLE! ⋆ ˚｡ ⋆୨♡୧⋆ ˚｡ ⋆ \nSUPER VILLAIN KAI LOSES...");
+            System.out.println("\n─── ⋆⋅☆⋅⋆ SUPER HERO WINNIE WINS THE BATTLE! \n─── ⋆⋅☆⋅⋆ SUPER VILLAIN KAI LOSES...");
         } else {
-            System.out.println("\nSUPER VILLAIN KAI WINS THE BATTLE! \nSUPER HERO WINNIE LOSES...");
+            System.out.println("\n─── ⋆⋅☆⋅⋆ SUPER VILLAIN KAI WINS THE BATTLE! \n─── ⋆⋅☆⋅⋆ SUPER HERO WINNIE LOSES...");
         }
+
+        System.out.println(" ");
+        System.out.println("❀° ┄──────────────────╮");
+        superWinnie.printBattleLog();
+        System.out.println(" ");
+        superKai.printBattleLog();
+        System.out.println("╰───────────────────┄ °❀");
 
     }
 

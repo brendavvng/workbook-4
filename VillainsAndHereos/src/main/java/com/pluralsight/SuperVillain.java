@@ -28,6 +28,7 @@ public class SuperVillain extends SuperPerson {
             // we were able to attack and damage opponent
             System.out.println(this.name + " attacks " + opponent.name + " with " + evilTotalDamage + "% of evil damage!!!");
             opponent.takeDamage(evilTotalDamage);
+            logHit(opponent);
         }
 
     }

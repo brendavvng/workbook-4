@@ -1,6 +1,8 @@
 package com.pluralsight;
 
 import java.util.Random;
+import java.util.HashMap;
+
 
 public class SuperPerson {
 
@@ -51,6 +53,23 @@ public class SuperPerson {
 
         // build and return a string that tells us how the super person is doing
         return this.name + " has " + this.health + "% health left.";
+    }
+
+    private HashMap<String, Integer> battleLog = new HashMap<>();
+
+    //update the log entry for our SuperPerson
+    public void logHit(SuperPerson opponent) {
+        String name = opponent.name;
+        int count = battleLog.getOrDefault(name, 0);
+        battleLog.put(name, count + 1);
+    }
+
+    //print the battle log for a SuperPerson
+    public void printBattleLog() {
+        System.out.println("Battle log for " + name + ":");
+        for (HashMap.Entry<String, Integer> entry : battleLog.entrySet()) {
+            System.out.println(" - Hit " + entry.getKey() + ": " + entry.getValue() + " times");
+        }
     }
 
 }
