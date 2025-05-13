@@ -33,21 +33,21 @@ public class SuperApp {
 
         // creating while loop for super hero
         while (superWinnie.isAlive() && superKai.isAlive()) {
-            System.out.println("\nWinnie attacks with Paws of Justice! ⍝ ⍝\n");
+            System.out.println("\n'*•.¸♡ ⍝ ⍝ Winnie attacks with Paws of Justice! ⍝ ⍝ ♡¸.•*'\n");
             superWinnie.fight(superKai);
             System.out.println(superKai.getStatus());
 
             if(!superKai.isAlive()) {
                 break;
             }
-            System.out.println("\n   ---Kai attacks with the Evil Tail Whip!---\n");
+            System.out.println("\n─── ⋆⋅☆⋅⋆ ──Kai attacks with the Evil Tail Whip!─── ⋆⋅☆⋅⋆ ──\n");
             superKai.fight(superWinnie);
             System.out.println(superWinnie.getStatus());
         }
 
         System.out.println("\n.。..*・゜゜・*:.。..。GAME!!!・**・゜゜・*:.゜・*:.+.゜｡   ");
         if (superWinnie.isAlive()) {
-            System.out.println("\nSUPER HERO WINNIE WINS THE BATTLE! \nSUPER VILLAIN KAI LOSES...");
+            System.out.println("\nSUPER HERO WINNIE WINS THE BATTLE! ⋆ ˚｡ ⋆୨♡୧⋆ ˚｡ ⋆ \nSUPER VILLAIN KAI LOSES...");
         } else {
             System.out.println("\nSUPER VILLAIN KAI WINS THE BATTLE! \nSUPER HERO WINNIE LOSES...");
         }

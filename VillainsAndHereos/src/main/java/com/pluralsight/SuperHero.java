@@ -23,7 +23,7 @@ public class SuperHero extends SuperPerson{
 
     @Override
     public void fight(SuperPerson opponent) {
-        System.out.println("           ---⍝ ⍝ Pow Pow! ⍝ ⍝ ---       \n");
+        System.out.println("       ⋆ ˚｡ ˚｡ ⋆ ⍝ ⍝ Pow Pow! ⍝ ⍝ ⋆ ˚｡ ˚｡ ⋆ \n");
         // make the hero do a random amount of damage to the opponent
         // the damage should be a random number plus the exp points (powerLevel)
         // if the base damage (without the XP) was 0, don't do any damage and just say you missed
