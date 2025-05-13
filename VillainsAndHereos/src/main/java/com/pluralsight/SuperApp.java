@@ -53,6 +53,7 @@ public class SuperApp {
         }
 
         System.out.println(" ");
+        System.out.println("        S T A T S          ");
         System.out.println("❀° ┄──────────────────╮");
         superWinnie.printBattleLog();
         System.out.println(" ");
