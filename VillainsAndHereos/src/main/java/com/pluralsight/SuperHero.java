@@ -47,4 +47,12 @@ public class SuperHero extends SuperPerson{
 
     }
 
+//    @Override
+//    public String getType() {
+//        return "SuperHero";
+//        // generic way of returning - you could use this in the SuperPerson class instead of using this in SuperHero
+//        // and SuperVillain class.
+//        // this.getClass().getSimpleName(); - returns similar behavior
+//    }
+
 }

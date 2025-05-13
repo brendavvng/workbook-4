@@ -3,8 +3,8 @@ package com.pluralsight;
 import java.util.Random;
 import java.util.HashMap;
 
-
-public class SuperPerson {
+// abstract class that prevents instantiation and acts as a blueprint for child classes
+public abstract class SuperPerson {
 
     // protected properties so they can possibly be accessed by our children,
     // grand children, etc. these properties stay in the family, it's less restrictive
@@ -29,13 +29,11 @@ public class SuperPerson {
     }
 
     // method that allows us to fight another SuperPerson
-    public void fight(SuperPerson opponent) {
-        // generate a random amount of damage
-        // this line returns a number between 0 and 20
-        int damageAmount = new Random().nextInt(21);
-        // print out who we are fighting
-        System.out.println(this.name + " is fighting " + opponent.name);
-        opponent.takeDamage(damageAmount);
+    public abstract void fight(SuperPerson opponent);
+
+    public String getType() {
+        return this.getClass().getSimpleName();
+        // generic way of returning
     }
 
     // method allows a super person to take damage

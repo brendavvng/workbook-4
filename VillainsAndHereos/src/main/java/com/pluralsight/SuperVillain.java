@@ -10,7 +10,7 @@ public class SuperVillain extends SuperPerson {
 
         this.experiencePoints = evilLevel;
 
-        System.out.println(this.name + " unleashes Super Chonky Evilness, with a power level of " + evilLevel + "!");
+        System.out.println(this.name + " unleashes Super Chonky Evilness, with an evil level of " + evilLevel + "!");
 
     }
 
@@ -32,5 +32,10 @@ public class SuperVillain extends SuperPerson {
         }
 
     }
+
+//    @Override
+//    public String getType() {
+//        return "SuperVillain";
+//    }
 
 }
