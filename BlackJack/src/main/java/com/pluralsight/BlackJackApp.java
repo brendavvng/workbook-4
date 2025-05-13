@@ -13,7 +13,6 @@ public class BlackJackApp {
         // String player1 =
 
 
-
         //create the deck
         Deck deck = new Deck();
         //create the hand

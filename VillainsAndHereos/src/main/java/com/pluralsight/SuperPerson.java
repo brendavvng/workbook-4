@@ -50,7 +50,7 @@ public class SuperPerson {
     public String getStatus() {
 
         // build and return a string that tells us how the super person is doing
-        return this.name + " has " + this.health + " health left!";
+        return this.name + " has " + this.health + "% health left.";
     }
 
 }
