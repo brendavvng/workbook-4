@@ -26,7 +26,7 @@ public class SuperVillain extends SuperPerson {
             System.out.println(this.name + " misses!!! No damage done...");
         } else {
             // we were able to attack and damage opponent
-            System.out.println(this.name + " attacks " + opponent.name + " with " + evilTotalDamage + "% of evil damage!!!");
+            System.out.println(this.name + " whoops " + opponent.name + " with " + evilTotalDamage + "% of evil damage!!!");
             opponent.takeDamage(evilTotalDamage);
             logHit(opponent);
         }
