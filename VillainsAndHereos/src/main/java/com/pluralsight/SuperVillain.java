@@ -2,7 +2,7 @@ package com.pluralsight;
 
 import java.util.Random;
 
-public class SuperVillain extends SuperPerson {
+public class SuperVillain extends SuperPerson implements Fightable {
 
     // constructor that calls the parent class constructor
     public SuperVillain(String name, int health, int evilLevel) {
